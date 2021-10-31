@@ -5,9 +5,8 @@ import 'package:to_do_bloc/model/todo.dart';
 //* Used to manage all local Database CRUD operations for ToDo model asynchronously
 //! Comminucator between the ToDoRepository and DatabaseProvider
 class ToDoDao {
-  // final dbProvider = DatabaseProvider.dbProvider;
-  final dbProvider = DatabaseProvider.dbProvider;
-
+  //final dbProvider = DatabaseProvider.dbProvider;
+  final DatabaseProvider dbProvider = DatabaseProvider();
   //Adds new ToDo records
   Future<int> createToDo(ToDo todo) async {
     final db = await dbProvider.database;
